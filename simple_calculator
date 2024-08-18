@@ -1,0 +1,176 @@
+print("choose the no. of operation you want to perform")
+print("1.+ = addition \n2.- = subtraction \n3.* = product \n4./ = division \n5.** = power or root \n6.log \n7.sin \n8.cos \n9.tan \n10.cosec \n11.sec \n12.cot \n13.solution of quad_equation")
+def main():
+    calc_operation = int(input("no. of operation:"))
+
+    if(calc_operation == 1):
+        first_number = int(input("first no. = "))
+        second_number = int(input("second no. = "))
+        print("sum = " ,first_number + second_number)
+
+    elif(calc_operation == 2):
+        first_number = int(input("first no. = "))
+        second_number = int(input("second no. = "))
+        print("difference = " ,first_number - second_number)
+
+    elif(calc_operation == 3):
+        first_number = int(input("first no. = "))
+        second_number = int(input("second no. = "))
+        print("product = " ,first_number * second_number)
+
+    elif(calc_operation == 5):
+        first_number = float(input("base = "))
+        second_number = float(input("power = "))
+        print("Answer = " ,first_number**second_number)  
+
+    elif(calc_operation == 4):
+        first_number = int(input("first no. = "))
+        second_number = int(input("second no. = "))
+        print("division = " ,first_number / second_number)
+
+    elif(calc_operation == 6):
+        n = int(input("enter a number="))
+        if(n == 0):
+            print("not defined")
+        else:
+            log_n = (n-1)/n + (1/2)*((n-1)/n)**2 + (1/3)*((n-1)/n)**3 + (1/4)*((n-1)/n)**4 + (1/5)*((n-1)/n)**5 + 1/6*((n-1)/n)**6 + (1/7)*((n-1)/n)**7 + (1/8)*((n-1)/n)**8 + (1/9)*((n-1)/n)**9 + (1/10)*((n-1)/n)**10 + (1/11)*((n-1)/n)**11 + (1/12)*((n-1)/n)**12 + (1/13)*((n-1)/n)**13 + (1/14)*((n-1)/n)**14 + (1/15)*((n-1)/n)**15 + (1/16)*((n-1)/n)**16 + (1/17)*((n-1)/n)**17 + (1/18)*((n-1)/n)
+            print("log_n is:", log_n)
+
+
+    elif(calc_operation == 7):
+        x = int((input("enter an angle in degrees =")))
+        if(x > 360):
+            while x > 360:
+                x -= 360
+        n = x*3.1428571428/180
+        if(x < 180):
+            sin_n = n - n**3/6 + n**5/120 - n**7/5040
+            print(sin_n)
+        elif(x == 180):
+            print("0")
+        elif(x > 180):
+            while n > 3.1428:
+                n -= 3.1428
+            sin_n = n - n**3/6 + n**5/120 - n**7/5040
+            print(-sin_n)
+
+    elif(calc_operation == 8):
+        x = int((input("enter an angle in degrees =")))
+        if( x > 360):
+            while x >= 360:
+                x -= 360
+        n = x*3.1428571428/180
+        if(x < 180):
+            cos_n = 1 - n**2/2 + n**4/24 - n**6/720
+            print(cos_n)
+        elif(x == 180):
+            print("-1")
+        elif(x > 180):
+            while n > 3.1428:
+                n -= 3.1428
+            cos_n = 1 - n**2/2 + n**4/24 - n**6/720
+            print(-cos_n)
+
+    elif(calc_operation == 9):
+        x = int(input("enter an angle in degrees ="))
+        if( x > 180):
+            while x > 180:
+                x -= 180
+        n = x*3.1428571428/180
+        sin_n = n - n**3/6 + n**5/120 - n**7/5040
+        cos_n = 1 - n**2/2 + n**4/24 - n**6/720
+        tan_n = sin_n/cos_n
+        if(x == 90):
+            print("not defined")
+        else:
+            print(tan_n)
+    
+    
+
+    elif(calc_operation == 10):
+        x = int((input("enter an angle in degrees =")))
+        if(x > 360):
+            while x > 360:
+                x -= 360
+        n = x*3.1428571428/180
+        if(0 < x < 180):
+            sin_n = n - n**3/6 + n**5/120 - n**7/5040
+            cosec_n = 1/sin_n
+            print(cosec_n)
+        elif(x == 180):
+            print("not defined")
+        elif(x == 0):
+            print("not defined")
+        elif(x == 360):
+            print("not defined")
+        elif(x > 180):
+            while n > 3.1428:
+                n -= 3.1428
+            sin_n = n - n**3/6 + n**5/120 - n**7/5040
+            cosec_n = 1/sin_n
+            print(-cosec_n)
+
+
+
+    elif(calc_operation == 11):
+        x = int((input("enter an angle in degrees =")))
+        if( x > 360):
+            while x >= 360:
+                x -= 360
+        n = x*3.1428571428/180
+        if(x == 90):
+            print("not defined")
+        elif(x == 270):
+            print("not defined")
+        elif(x < 180):
+            cos_n = 1 - n**2/2 + n**4/24 - n**6/720
+            sec_n = 1/cos_n
+            print(sec_n)
+        elif(x == 180):
+            print("-1")
+        elif(x > 180):
+            while n > 3.1428:
+                n -= 3.1428
+            cos_n = 1 - n**2/2 + n**4/24 - n**6/720
+            sec_n = 1/cos_n
+            print(-sec_n)
+
+
+
+    elif(calc_operation == 12):
+        x = int(input("enter an angle in degrees ="))
+        if( x > 180):
+            while x > 180:
+                x -= 180
+        n = x*3.1428571428/180
+        sin_n = n - n**3/6 + n**5/120 - n**7/5040
+        cos_n = 1 - n**2/2 + n**4/24 - n**6/720
+        cot_n = cos_n / sin_n
+        if(x == 0):
+            print("not defined")
+        elif(x == 180):
+            print("not defined")
+        else:
+            print(cot_n)
+
+    elif(calc_operation == 13):
+        print("a*x*x + b*x + c = 0")
+        a = int(input("enter value of a ="))
+        b = int(input("enter value of b ="))
+        c = int(input("enter value of c ="))
+        det = b*b - 4*a*c
+        p = ((-b) + (det)**0.5)/2*a
+        q = ((-b) - (det)**0.5)/2*a
+        if(det < 0):
+            print("roots are imaginary")
+        print("first root =" , p)
+        print("second root =" , q)
+
+    repeat = input("Do you want to perform again = ").lower()
+    if(repeat == "yes"):
+        main()
+    else:
+        print("thank you")
+        exit()
+
+main()
